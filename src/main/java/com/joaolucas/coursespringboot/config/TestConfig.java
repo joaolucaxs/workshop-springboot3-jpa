@@ -16,7 +16,6 @@ public class TestConfig implements CommandLineRunner{
 
 	@Autowired
 	private UserRepository userRepository;
-	
 
 	
 	@Override

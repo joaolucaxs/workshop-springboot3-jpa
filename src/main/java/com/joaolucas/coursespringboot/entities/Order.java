@@ -110,6 +110,14 @@ public class Order implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
+	public Double getTotal() {
+		double sum = 0.0;
+		for (OrderItem orderItem : items) {
+			sum = sum + orderItem.getSubTotal();
+		}
+		return sum;
+	}
+
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", moment=" + moment + ", client=" + client + "]";
